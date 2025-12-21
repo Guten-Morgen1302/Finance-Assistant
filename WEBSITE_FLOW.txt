@@ -1,0 +1,498 @@
+# MONEYMIND WEBSITE COMPLETE FLOW
+
+## 1. ENTRY POINT & INITIALIZATION
+User Accesses Website
+    ↓
+Streamlit App Loads (Port 5000)
+    ↓
+Initialize Session State
+    ├─ User Transactions (sample data loaded)
+    ├─ Current Currency (default: USD)
+    ├─ Current Vibe/Mood (default: CHILL)
+    ├─ AI Agent Status (enabled/disabled)
+    └─ Budget Plan (if exists)
+
+---
+
+## 2. SIDEBAR NAVIGATION
+Sidebar Component Renders
+    ├─ Logo & Title (MoneyMind)
+    ├─ Navigation Radio Buttons (8 options)
+    │   ├─ 🏠 Dashboard
+    │   ├─ 🎭 Vibe Check
+    │   ├─ 📊 Budget Planner
+    │   ├─ 🎯 What-If Simulator
+    │   ├─ 🔍 Expense Forecasting
+    │   ├─ 🏦 Income Analyzer
+    │   ├─ 📈 Inflation Detector
+    │   └─ 🧠 Stress Predictor
+    │
+    ├─ Currency Selector
+    │   ├─ USD ($)
+    │   ├─ INR (₹)
+    │   └─ EUR (€)
+    │   └─ [Converts all amounts in real-time]
+    │
+    ├─ AI Assistant Toggle
+    │   ├─ Enable/Disable Checkbox
+    │   └─ If Enabled:
+    │       ├─ Agent Mode Selection
+    │       │   ├─ 💰 Autonomous Slay Planner
+    │       │   ├─ 🧾 Emotional Spending Coach
+    │       │   ├─ 📊 Financial Advisor
+    │       │   └─ 🎯 Goal Tracker
+    │       └─ Agent Intensity Slider (1-5)
+
+---
+
+## 3. MAIN CONTENT AREA - DASHBOARD (🏠)
+Dashboard Page Renders
+    ↓
+Header Section
+    ├─ MoneyMind Title
+    ├─ Tagline: "Emotionally Smart. Financially Sharp."
+    └─ Current User Stats
+
+Vibe Detection Section
+    ├─ Money Stress Level Slider (1-10)
+    ├─ Financial Confidence Slider (1-10)
+    └─ [Triggers Mood Detection]
+        ↓
+        Mood Analysis Engine Activates
+        ├─ Map Input to Vibe Type (6 options)
+        │   ├─ STRESSED (😔)
+        │   ├─ CONFIDENT (🔥)
+        │   ├─ CONFUSED (🤷)
+        │   ├─ EXCITED (⚡)
+        │   ├─ CHILL (😌)
+        │   └─ GUILTY (💜)
+        │
+        ├─ Load Aura Color Scheme for Vibe
+        ├─ Generate AI Response based on Vibe
+        └─ Display WealthMinds Oracle Card
+            ├─ Emoji Animation
+            ├─ Personalized Greeting
+            ├─ Approach Description
+            └─ Custom Tips (from AI response)
+
+FinanceGPT Supreme Chat Section
+    ├─ Glowing Rainbow Border (animated)
+    ├─ Title: "🔮 FinanceGPT Supreme"
+    ├─ Subtitle: "Chat with Your Financial Wizard ✨"
+    ├─ Current Mode Display
+    └─ Chatbase iFrame
+        └─ [User can chat in real-time]
+
+Dashboard Content Below Chat
+    ├─ Quick Stats Cards
+    │   ├─ Monthly Income
+    │   ├─ Current Balance
+    │   ├─ Predicted End-of-Month Balance
+    │   └─ Daily Spend Rate
+    │
+    ├─ Budget Breakdown (50/30/20)
+    │   ├─ Needs (50%)
+    │   ├─ Wants (30%)
+    │   └─ Savings (20%)
+    │
+    ├─ Spending by Category
+    │   ├─ Essential
+    │   ├─ Joy
+    │   ├─ Oops (Impulse)
+    │   └─ Calculated from Transactions
+    │
+    ├─ Recent Transactions Display
+    │   ├─ Last 10 Transactions
+    │   ├─ Amount (converted to selected currency)
+    │   ├─ Category
+    │   └─ Vibe Impact
+    │
+    └─ AI Agent Interventions (if enabled)
+        ├─ Live Agent Alerts
+        │   ├─ Heavy Spending Detected
+        │   ├─ Positive Reinforcement
+        │   └─ Weekly Check-in
+        └─ Milestone Celebrations
+            ├─ 25% Goal Progress
+            ├─ 50% Goal Progress (🎉)
+            ├─ 75% Goal Progress
+            ├─ 90% Goal Progress
+            └─ 100% Goal Achievement (🏆)
+
+---
+
+## 4. VIBE CHECK PAGE (🎭)
+Vibe Check Page Renders
+    ├─ Duplicate Dashboard Vibe System
+    ├─ Mood Detector (same as dashboard)
+    ├─ FinanceGPT Chat (always visible)
+    └─ Additional Vibe-Specific Content
+        ├─ Emotional Spending Tracker
+        │   ├─ Last Purchase Analysis
+        │   ├─ "Why Did You Buy This?" Question
+        │   ├─ Emotional Rating Slider
+        │   └─ Save Emotional Analysis
+        │
+        └─ Emotional Breakdown
+            ├─ Joy Purchases Count & Total
+            ├─ Regret Purchases Count & Total
+            ├─ Impulse Purchases Count & Total
+            └─ Survival Purchases Count & Total
+
+---
+
+## 5. BUDGET PLANNER PAGE (📊)
+Budget Planner Page Renders
+    ├─ Monthly Income Input
+    ├─ Calculate Budget Split (50/30/20)
+    │   ├─ Needs Amount (50%)
+    │   ├─ Wants Amount (30%)
+    │   └─ Savings Amount (20%)
+    │
+    ├─ Category Target Setting
+    │   ├─ Food
+    │   ├─ Transport
+    │   ├─ Entertainment
+    │   ├─ Shopping
+    │   └─ [User can set custom targets]
+    │
+    ├─ Budget vs Actual Comparison
+    │   └─ Visual Charts (Plotly)
+    │
+    └─ Emergency Fund Builder
+        ├─ Target Calculation (6 months expenses)
+        ├─ Current Amount Tracking
+        ├─ Suggested Savings Strategy
+        └─ Progress Bar
+
+---
+
+## 6. WHAT-IF SIMULATOR PAGE (🎯)
+What-If Simulator Page Renders
+    ├─ Monthly Income Input
+    ├─ Life Event Selection (Instagram-style)
+    │   ├─ 💍 Get Married
+    │   ├─ 👶 Have a Baby
+    │   ├─ 🏠 Buy a House
+    │   ├─ 🚗 Buy a Car
+    │   ├─ 💼 Job Change
+    │   ├─ 📚 Further Education
+    │   ├─ 🏥 Health Crisis
+    │   └─ 🌍 Travel/Sabbatical
+    │
+    ├─ Event Impact Calculation
+    │   ├─ Expense Change %
+    │   ├─ Income Stability Change
+    │   ├─ Timeline (months/years)
+    │   └─ Success Rate %
+    │
+    ├─ Ripple Effect Dashboard
+    │   ├─ New Monthly Expenses
+    │   ├─ Savings Impact
+    │   ├─ Lifestyle Change
+    │   └─ Financial Stress Level
+    │
+    └─ Breaking Point Alert
+        ├─ If scenario becomes financially impossible
+        └─ Suggest timeline adjustment
+
+---
+
+## 7. EXPENSE FORECASTING PAGE (🔍)
+Expense Forecasting Page Renders
+    ├─ Expense Archaeology
+    │   ├─ Analyze Historical Spending
+    │   ├─ Identify Hidden Patterns
+    │   └─ Anomaly Detection (unusual spikes)
+    │
+    ├─ Subscription Graveyard
+    │   ├─ List Recurring Charges
+    │   ├─ Identify Unused Subscriptions
+    │   └─ Potential Savings Calculation
+    │
+    ├─ Leaky Bucket Visualization
+    │   ├─ Show where money is draining
+    │   ├─ Category breakdown
+    │   └─ Suggest cuts
+    │
+    └─ Future Spending Forecast
+        ├─ Predict next 3-6 months
+        ├─ Identify growth trends
+        └─ Alert for unusual increases
+
+---
+
+## 8. INCOME ANALYZER PAGE (🏦)
+Income Analyzer Page Renders
+    ├─ Income Input
+    ├─ Bank Loan Eligibility Score
+    │   ├─ Based on income stability
+    │   ├─ Debt-to-income ratio
+    │   └─ Recommended loan amount
+    │
+    ├─ Gig Economy Readiness Check
+    │   ├─ Income variability assessment
+    │   ├─ Emergency fund requirement
+    │   └─ Stability recommendation
+    │
+    ├─ Income Forecast
+    │   ├─ Historical trend analysis
+    │   ├─ Projected income growth
+    │   └─ Salary negotiation timeline
+    │
+    └─ Salary Negotiation Power
+        ├─ Market rate comparison
+        ├─ Negotiation recommendations
+        └─ Expected salary increase
+
+---
+
+## 9. INFLATION DETECTOR PAGE (📈)
+Inflation Detector Page Renders
+    ├─ 5-Year Broke Clock
+    │   ├─ Current spending rate
+    │   ├─ Inflation projection
+    │   └─ Alert if breaking point approaching
+    │
+    ├─ Category Inflation Breakdown
+    │   ├─ Which categories inflating fastest
+    │   ├─ Year-over-year comparison
+    │   └─ Behavioral economics insights
+    │
+    ├─ Auto-Tightening Cap
+    │   ├─ Suggest spending limits
+    │   ├─ Automatic alerts when exceeded
+    │   └─ Adjust for inflation
+    │
+    └─ Inflation Speed Gauge
+        ├─ Visual indicator of inflation rate
+        └─ Recommendation to reduce spending
+
+---
+
+## 10. STRESS PREDICTOR PAGE (🧠)
+Stress Predictor Page Renders
+    ├─ Stress Heat Map Calendar
+    │   ├─ Color-coded stress levels by date
+    │   ├─ Identify high-stress periods
+    │   └─ Historical pattern analysis
+    │
+    ├─ Stress Prevention Mode
+    │   ├─ Build emergency fund progress
+    │   ├─ Reduce financial obligations
+    │   └─ Suggested actions
+    │
+    ├─ Emotional Intervention System
+    │   ├─ Detect stressed spending
+    │   ├─ Suggest alternatives
+    │   └─ Provide support messages
+    │
+    └─ Financial Wellness Score
+        ├─ Aggregate stress indicators
+        ├─ Overall wellness rating (1-10)
+        └─ Recommendations for improvement
+
+---
+
+## 11. DATA & CURRENCY CONVERSION LAYER
+All Pages Use Common Functions:
+    ├─ format_currency(amount)
+    │   ├─ Get selected currency (USD/INR/EUR)
+    │   ├─ Fetch exchange rate
+    │   ├─ Multiply amount by rate
+    │   └─ Return formatted string ($, ₹, €)
+    │
+    ├─ Transaction Storage
+    │   ├─ Store in Session State
+    │   ├─ SQLite for persistence
+    │   └─ Query for analytics
+    │
+    └─ User Profile Data
+        ├─ Income
+        ├─ Goals
+        ├─ Budget Preferences
+        └─ AI Agent Settings
+
+---
+
+## 12. AI AGENT LAYER
+If AI Agent Enabled:
+    ├─ Autonomous Slay Planner Mode
+    │   ├─ Goal Input Form
+    │   ├─ Calculate weekly savings needed
+    │   ├─ Monitor progress
+    │   └─ Provide AI recommendations
+    │
+    ├─ Emotional Spending Coach Mode
+    │   ├─ Track emotional transactions
+    │   ├─ Analyze patterns
+    │   ├─ Provide emotional support
+    │   └─ Suggest alternatives
+    │
+    ├─ Financial Advisor Mode
+    │   ├─ Generate personalized advice
+    │   ├─ Recommend investments
+    │   └─ Strategic planning
+    │
+    └─ Goal Tracker Mode
+        ├─ Monitor all goals
+        ├─ Track progress
+        └─ Celebrate milestones
+
+---
+
+## 13. ALERT & NOTIFICATION SYSTEM
+Background Process:
+    ├─ Monitor Spending
+    │   ├─ Check last 5 transactions
+    │   ├─ If > $200: Heavy Spending Alert
+    │   └─ Show suggestions
+    │
+    ├─ Check Calendar
+    │   ├─ If date >= 25: Month-end Alert
+    │   └─ Warning about careful spending
+    │
+    ├─ Detect Patterns
+    │   ├─ Count impulse purchases in last 5
+    │   ├─ If >= 2: Impulse Pattern Alert
+    │   └─ Suggest review
+    │
+    ├─ Holiday Detection
+    │   ├─ November/December: Holiday Season Alert
+    │   └─ Suggest gift budget
+    │
+    └─ Milestone Tracking
+        ├─ 25%, 50%, 75%, 90%, 100% goals
+        └─ Display celebration message
+
+---
+
+## 14. OUTPUT & VISUALIZATION
+All Pages Display:
+    ├─ Plotly Charts
+    │   ├─ Pie charts (spending breakdown)
+    │   ├─ Bar charts (comparisons)
+    │   ├─ Line charts (trends)
+    │   └─ Interactive & responsive
+    │
+    ├─ Custom HTML Cards
+    │   ├─ Gradient backgrounds
+    │   ├─ CSS animations
+    │   ├─ Glowing borders
+    │   └─ Hover effects
+    │
+    ├─ Metrics Cards
+    │   ├─ Large numbers
+    │   ├─ Color-coded status
+    │   ├─ Trend indicators
+    │   └─ Updated in real-time
+    │
+    └─ Status Messages
+        ├─ Success alerts (st.success)
+        ├─ Info messages (st.info)
+        ├─ Warnings (st.warning)
+        └─ Errors (st.error)
+
+---
+
+## 15. COMPLETE USER JOURNEY EXAMPLE
+User Opens App
+    ↓
+Selects Dashboard from Sidebar
+    ↓
+Selects Currency (INR)
+    ↓
+Sets Stress Level = 8, Confidence = 4
+    ↓
+Mood Detected = STRESSED
+    ↓
+WealthMinds Oracle Displays
+    ├─ Emoji: 💚
+    ├─ Greeting: "Hey bestie, I can see you're feeling stressed..."
+    └─ Tip: "Let's find one thing to celebrate..."
+    ↓
+User Scrolls Down
+    ↓
+Sees FinanceGPT Chat
+    ↓
+Asks: "How can I reduce stress about money?"
+    ↓
+FinanceGPT Responds: "Here are 5 ways to reduce financial stress..."
+    ↓
+User Views Dashboard Stats
+    ├─ Monthly Income: ₹50,000
+    ├─ Current Balance: ₹8,500
+    └─ Predicted End: ₹-2,000 (negative!)
+    ↓
+Alert Triggers: "Heavy spending detected! Cut ₹500/day"
+    ↓
+User Clicks "Enable AI Agent"
+    ↓
+Selects "💰 Autonomous Slay Planner"
+    ↓
+Sets Goal: "Save ₹100,000 for Laptop in 6 months"
+    ↓
+AI Calculates: "Save ₹3,850/week"
+    ↓
+AI Shows: "This requires 15% of your income. Consider extending timeline."
+    ↓
+User Adjusts to 8 months
+    ↓
+AI Approves: "Perfect! Save ₹2,300/week. You've got this! 🚀"
+    ↓
+Progress Bar Shows 0% (just started)
+    ↓
+User Navigates to Budget Planner
+    ↓
+Monthly Income: ₹50,000
+    ↓
+Budget Split Calculated:
+    ├─ Needs: ₹25,000
+    ├─ Wants: ₹15,000
+    └─ Savings: ₹10,000
+    ↓
+User Sets Category Targets
+    ├─ Food: ₹5,000
+    ├─ Transport: ₹3,000
+    └─ Entertainment: ₹2,000
+    ↓
+Charts Display vs Actual Spending
+    ↓
+Emergency Fund Section Shows
+    ├─ Target: ₹300,000 (6 months)
+    ├─ Current: ₹0
+    └─ Strategy: "Start with ₹1,000, automate ₹2,000/month"
+    ↓
+User Clicks "What-If Simulator"
+    ↓
+Selects Event: "💍 Get Married" (Timeline: 2 years)
+    ↓
+Impact Calculated:
+    ├─ New Monthly Expense: +40%
+    ├─ Income Stability: -20%
+    └─ Success Rate: 65%
+    ↓
+App Shows: "You can handle this if you reduce Joy spending by 50%"
+    ↓
+User Navigates to Different Pages
+    ├─ Expense Forecasting: Identifies ₹500/month unused subscriptions
+    ├─ Income Analyzer: Suggests salary negotiation (can get +15%)
+    ├─ Inflation Detector: Warns that spending inflating 12% yearly
+    └─ Stress Predictor: Overall wellness = 6/10, suggests emergency fund
+    ↓
+Throughout Session:
+    ├─ All currency displays update to INR (₹)
+    ├─ AI responds based on STRESSED mood
+    ├─ Colors adapt to STRESSED aura (red/orange theme)
+    ├─ Proactive alerts appear
+    └─ Celebrations trigger at 25%, 50% goals
+    ↓
+User Logs Off
+    ↓
+All Data Saved to Session State + SQLite
+    ↓
+Next Session: Data persists
+
+---
+
+END OF COMPLETE FLOW
